@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum- Bio Pribadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Latar belakang lebih terang */
+            color: #333;
+            line-height: 1.7; /* Spasi antar baris lebih nyaman */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px; /* Ukuran container sedikit lebih kecil */
+            margin: 0 auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: #222; /* Header lebih gelap */
+            color: #fff;
+            padding: 80px 0; /* Padding lebih besar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+        }
+
+        .main-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.8em; /* Nama lebih besar */
+            margin-bottom: 8px;
+            font-weight: 700; /* Lebih tebal */
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .tagline {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.3em; /* Tagline sedikit lebih besar */
+            font-weight: 300; /* Lebih tipis */
+            color: #bbb;
+            margin-top: 5px;
+        }
+
+        /* Separator Line */
+        .separator {
+            border: none; /* Hilangkan border default */
+            height: 3px; /* Garis lebih tebal */
+            background-color: #e74c3c; /* Merah cerah */
+            width: 80px; /* Garis lebih pendek dan fokus */
+            margin: 50px auto; /* Jarak lebih luas */
+            border-radius: 2px; /* Sedikit lengkungan */
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em; /* Judul bagian lebih besar */
+            margin-bottom: 25px;
+            color: #222; /* Judul berwarna gelap */
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px; /* Garis bawah judul lebih pendek */
+            height: 4px;
+            background-color: #e74c3c; /* Merah cerah */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0; /* Padding lebih luas */
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sedikit bayangan */
+            margin-bottom: 40px;
+        }
+
+        .about-section p {
+            font-size: 1.15em; /* Teks bio lebih besar */
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center; /* Teks bio di tengah */
+            color: #555;
+        }
+
+        .highlight-red {
+            color: #e74c3c; /* Teks sorotan merah cerah */
+            font-weight: 700; /* Lebih tebal */
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 0;
+            background-color: #f8f8f8;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            margin-top: 40px; /* Jarak dari judul lebih luas */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px; /* Jarak antar ikon */
+        }
+
+        .social-icon-link {
+            display: flex;
+            flex-direction: column; /* Ikon di atas teks */
+            align-items: center;
+            text-decoration: none;
+            color: #555; /* Warna teks default */
+            font-size: 1.1em;
+            padding: 15px 20px; /* Padding lebih besar */
+            border: 1px solid #eee;
+            border-radius: 10px; /* Sudut lebih melengkung */
+            transition: all 0.3s ease-in-out; /* Transisi lebih halus */
+            min-width: 120px; /* Lebar minimum untuk setiap ikon */
+        }
+
+        .social-icon-link i {
+            font-size: 2.2em; /* Ukuran ikon lebih besar */
+            margin-bottom: 10px;
+            color: #777; /* Warna ikon default */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icon-link:hover {
+            background-color: #e74c3c; /* Latar belakang merah saat hover */
+            color: #fff;
+            border-color: #e74c3c;
+            transform: translateY(-5px); /* Sedikit naik saat di-hover */
+            box-shadow: 0 8px 15px rgba(231, 76, 60, 0.3); /* Bayangan merah saat hover */
+        }
+
+        .social-icon-link:hover i {
+            color: #fff; /* Ikon putih saat hover */
+        }
+
+        /* Footer Section */
+        .footer-section {
+            background-color: #222;
+            color: #aaa;
+            padding: 30px 0;
+            font-size: 0.9em;
+            margin-top: auto; /* Agar footer selalu di bawah */
+            border-top: 3px solid #e74c3c;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .main-name {
+                font-size: 2.8em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .about-section p {
+                font-size: 1em;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-icon-link {
+                width: 90%; /* Lebih lebar di mobile */
+                max-width: 250px; /* Batasi lebar agar tidak terlalu besar di tablet */
+                margin: 0 auto;
+                flex-direction: row; /* Ikon dan teks sejajar di mobile */
+                justify-content: center;
+            }
+            .social-icon-link i {
+                margin-right: 15px; /* Jarak antara ikon dan teks */
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="container">
+            <h1 class="main-name">Muhammad Farhan</h1>
+            <p class="tagline">Full life learner/Interested in tech</p>
+            </div>
+    </header>
+
+    <div class="separator"></div>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p>Saya bersemangat dalam <span class="highlight-red">inovasi teknologi</span> dan senang mempelajari hal baru, khususnya di bidang <span class="highlight-red">programming dan pengembangan antarmuka pengguna</span>.</p>
+        </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Terhubung dengan Saya</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/muhammad-farhan-alfa-rizqi-021574209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/A-1234-BC" target="_blank" class="social-icon-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://line.me/ti/p/E01dY33VFl" target="_blank" class="social-icon-link">
+                    <i class="fab fa-line"></i> Line
+                </a>
+                <a href="t.me/mfarhan_arizqi" target="_blank" class="social-icon-link">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2025 Muhammad Farhan. Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
